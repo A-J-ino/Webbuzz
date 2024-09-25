@@ -1,0 +1,187 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(270deg, #5d6d77, #647ca4, #344a58);
+    background-size: 600% 600%;
+    animation: gradientAnimation 10s ease infinite;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+nav {
+    background: linear-gradient(270deg, #6a6668, #4f4b40, #566d7b);
+    animation: gradientAnimation 10s ease infinite;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    /* z-index: 1000; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70px;
+    padding: 10px 0;
+}
+
+nav a {
+    color: #fff;
+    text-align: center;
+    padding: 15px 25px;
+    text-decoration: none;
+    font-weight: bold;
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    margin: 0 10px;
+    transition: background-color 0.4s ease, transform 0.3s ease, color 0.3s ease;
+}
+
+nav a:hover {
+    background-color: #fff;
+    color: #ff006a;
+    transform: scale(1.1);
+}
+
+.container{
+    margin-top: 100px;
+    margin-left: 20px;
+    margin-right: 20px;
+    display: flex;
+    flex-direction:column;
+    align-content:center;
+    gap: 30px;
+    background-color:  rgb(249, 247, 247);
+    padding: 20px;
+    border: 2px rgba(0, 0, 0, 0.3);
+    border-radius: 30px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    align-self: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.container:hover{
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
+    box-shadow: 0px 0px 30px 1px rgb(20, 204, 106);
+}
+
+.container h2 img{
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    border: 2px solid #ff006a;
+    margin-right: 10px;
+}
+.container1 img{
+    height: 400px;
+    width: 700px;
+    border: 2px solid #ff006a;
+    align-content: center;
+    align-self: center;
+}
+
+.container h2{
+    font-size: 1.8rem;
+    font-family: 'Verdana', sans-serif;
+    color: #ff006a;
+    text-align: left;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+.container p{
+    font-size: 1.1rem;
+    font-family: 'Verdana', sans-serif;
+    color: #333;
+    text-align: justify;
+    line-height: 1.6;
+}
+.container1{
+    margin-top: 100px;
+    margin-left: 20px;
+    margin-right: 20px;
+    width: 1000px;
+    height:500px;
+    display: flex;
+    flex-direction:column;
+    align-content:center;
+    gap: 30px;
+    background:linear-gradient(#daf4c2,#98c3ea,rgb(155, 177, 155));
+    padding: 20px;
+    border: 2px rgba(0, 0, 0, 0.3);
+    border-radius: 30px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    align-self: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.container1:hover{
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
+    box-shadow: 0px 0px 30px 1px rgb(144, 7, 248);
+    height: 700px;
+}
+.container1:hover p{
+    font-size: 1.1rem;
+    visibility:visible;
+    font-family: 'Verdana', sans-serif;
+    color: #090909;
+    text-align: justify;
+    line-height: 1.6;
+}
+.container1 h2{
+    font-size: 1.8rem;
+    font-family: 'Verdana', sans-serif;
+    color: #5a6420;
+    text-align: left;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+.container1 p{
+    visibility: hidden;
+    opacity: 1;
+}
+
+@keyframes gradientAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+button {
+    padding: 12px 24px;
+    background: #ff006a;
+    color: white;
+    font-size: 1rem;
+    border: none;
+    border-radius: 8px;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+    background-color: #ffbf00;
+    transform: scale(1.1);
+}
+.container p img{
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    border: 2px solid #ff006a;
+    margin-left: 10px;
+}
+h2{
+    justify-content: center;
+    margin:10px;
+
+}
+.boxes{
+    background-color: #000;
+}
+

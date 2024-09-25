@@ -1,0 +1,663 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Odibee+Sans&display=swap');
+html, body{
+    scroll-behavior: smooth;
+}
+body{
+    background-color: #CBCBCB;
+    margin: 0;
+    font-size: 14px;
+    color: #2E373A;
+    font-family: "Libre Baskerville", sans-serif;
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style: none;
+}
+:root {
+    --item3-transform: translate(0, 0);
+    --item3-filter: blur(0);
+    --item3-z-index: 10;
+    --item3-opacity: 1;
+
+    --item2-transform: translate(-50%, -10%) scale(0.8);
+    --item2-filter: blur(10px);
+    --item2-zindex: 7;
+    --item2-opacity: 1;
+
+    --item1-transform: translate(-90%, -20%) scale(0.4);
+    --item1-filter: blur(30px);
+    --item1-zindex: 6;
+    --item1-opacity: 1;
+
+    --item4-transform: translate(50%, 10%) scale(0.8);
+    --item4-filter: blur(10px);
+    --item4-zindex: 7;
+    --item4-opacity: 1;
+
+    --item5-transform: translate(90%, 20%) scale(0.4);
+    --item5-filter: blur(30px);
+    --item5-zindex: 6;
+    --item5-opacity: 1;
+
+    --item6-transform: translate(130%, 30%) scale(0.2);
+    --item6-filter: blur(50px);
+    --item6-zindex: 5;
+    --item6-opacity: 1;
+
+    --item7-transform: translate(170%, 40%) scale(0.1);
+    --item7-filter: blur(70px);
+    --item7-zindex: 4;
+    --item7-opacity: 1;
+
+    --item8-transform: translate(130%, 30%) scale(0.05);
+    --item8-filter: blur(50px);
+    --item8-zindex: 5;
+    --item8-opacity: 1;
+
+    --item9-transform: translate(170%, 40%) scale(0.01);
+    --item9-filter: blur(70px);
+    --item9-zindex: 4;
+    --item9-opacity: 1;
+
+    --item10-transform: translate(210%, 50%) scale(0.005);
+    --item10-filter: blur(100px);
+    --item10-zindex: 3;
+    --item10-opacity: 1;
+}
+
+a{
+    text-decoration: none;
+    color: #555;
+}
+header{
+    width: 1140px;
+    max-width: 90%;
+    margin: auto;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+header .logo{
+    font-weight: bold;
+}
+header nav a{
+    margin-left: 30px;
+}
+/* carousel */
+.carousel{
+    margin-top: -50px;
+    height: 800px;
+    overflow: hidden;
+    position: relative;
+}
+.carousel .list{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 1140px;
+    max-width: 90%;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 80%;
+}
+.carousel .list .item{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 70%;
+    height: 100%;
+    font-size: 15px;
+}
+.carousel .list .item img{
+    width: 50%;
+    position: absolute;
+    right: 0;
+    top: 25%;
+    transform: translateY(-25%);
+}
+.carousel .list .item .detail{
+    opacity: 0;
+    pointer-events: none;
+}
+.carousel .list .item .intro{
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translateY(-50%);
+    width: 400px;
+    opacity: 0;
+    pointer-events: none;
+}
+.carousel .list .item:nth-child(3) .intro{
+    opacity: 1;
+    pointer-events: auto;
+}
+.carousel .list .item:nth-child(n + 11){
+    opacity: 0;
+    pointer-events: none;
+}
+.carousel .list .item:nth-child(3) {
+    transform: var(--item3-transform);
+    filter: var(--item3-filter);
+    z-index: var(--item3-z-index);
+    opacity: var(--item3-opacity);
+}
+
+.carousel .list .item:nth-child(2) {
+    transform: var(--item2-transform);
+    filter: var(--item2-filter);
+    z-index: var(--item2-zindex);
+    opacity: var(--item2-opacity);
+    pointer-events: none;
+}
+
+.carousel .list .item:nth-child(1) {
+    transform: var(--item1-transform);
+    filter: var(--item1-filter);
+    z-index: var(--item1-zindex);
+    opacity: var(--item1-opacity);
+    pointer-events: none;
+}
+
+.carousel .list .item:nth-child(4) {
+    transform: var(--item4-transform);
+    filter: var(--item4-filter);
+    z-index: var(--item4-zindex);
+    opacity: var(--item4-opacity);
+    pointer-events: none;
+}
+
+.carousel .list .item:nth-child(5) {
+    transform: var(--item5-transform);
+    filter: var(--item5-filter);
+    z-index: var(--item5-zindex);
+    opacity: var(--item5-opacity);
+    pointer-events: none;
+}
+
+.carousel .list .item:nth-child(6) {
+    transform: var(--item6-transform);
+    filter: var(--item6-filter);
+    z-index: var(--item6-zindex);
+    opacity: var(--item6-opacity);
+    pointer-events: none;
+}
+
+.carousel .list .item:nth-child(7) {
+    transform: var(--item7-transform);
+    filter: var(--item7-filter);
+    z-index: var(--item7-zindex);
+    opacity: var(--item7-opacity);
+    pointer-events: none;
+}
+
+.carousel .list .item:nth-child(8) {
+    transform: var(--item8-transform);
+    filter: var(--item8-filter);
+    z-index: var(--item8-zindex);
+    opacity: var(--item8-opacity);
+    pointer-events: none;
+}
+
+.carousel .list .item:nth-child(9) {
+    transform: var(--item9-transform);
+    filter: var(--item9-filter);
+    z-index: var(--item9-zindex);
+    opacity: var(--item9-opacity);
+    pointer-events: none;
+}
+
+.carousel .list .item:nth-child(10) {
+    transform: var(--item10-transform);
+    filter: var(--item10-filter);
+    z-index: var(--item10-zindex);
+    opacity: var(--item10-opacity);
+    pointer-events: none;
+}
+.arrows{
+    position: absolute;
+    bottom: 10px;
+    width: 1140px;
+    max-width: 90%;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.arrows #next,
+.arrows #prev{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    font-family: monospace;
+    font-size: large;
+    font-weight: bold;
+    border: 1px solid #555;
+}
+.arrows #back{
+    font-family: poppins;
+    font-weight: 500;
+    border: none;
+    border-bottom: 1px solid #555;
+    letter-spacing: 3px;
+    background-color: transparent;
+    opacity: 0;
+    pointer-events: none;
+}
+.carousel .list .item .intro .stats{
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid #555;
+    font-family: poppins;
+    font-weight: bold;
+    margin-top: 1.2em;
+    padding: 5px 0;
+}
+.carousel .list .item:nth-child(3) .intro .title,
+.carousel .list .item:nth-child(3) .intro .des,
+.carousel .list .item:nth-child(3) .intro .stats{
+    opacity: 0;
+    animation: showContent 0.5s 0.7s ease-in-out 1 forwards;
+}
+@keyframes showContent{
+    from{
+        transform: translateY(50px);
+        filter: blur(30px);
+    }to{
+        transform: translateY(0);
+        opacity: 1;
+        filter: blur(0);
+    }
+}
+.carousel .list .item:nth-child(3) .intro .des{
+    animation-delay: 0.9s;
+}
+.carousel .list .item:nth-child(3) .intro .stats{
+    animation-delay: 1.3s;
+}
+.carousel.next .list .item:nth-child(2){
+    animation: positionItem3 0.5s ease-in-out forwards;
+}
+@keyframes positionItem3 {
+    from{
+        transform: var(--item3-transform);
+        filter: var(--item3-filter);
+        z-index: var(--item3-z-index);
+        opacity: var(--item3-opacity);
+    }
+}
+.carousel.next .list .item:nth-child(3){
+    animation: positionItem4 0.7s ease-in-out forwards;
+}
+@keyframes positionItem4{
+    from{
+        transform: var(--item4-transform);
+        filter: var(--item4-filter);
+        z-index: var(--item4-zindex);
+        opacity: var(--item4-opacity);
+    }
+}
+.carousel.next .list .item:nth-child(4){
+    animation: positionItem5 0.9s ease-in-out forwards;
+}
+@keyframes positionItem5 {
+    from{
+        transform: var(--item5-transform);
+        filter: var(--item5-filter);
+        z-index: var(--item5-zindex);
+        opacity: var(--item5-opacity);
+    }
+}
+.carousel.next .list .item:nth-child(5){
+    animation: positionItem6 1.1s ease-in-out forwards;
+}
+@keyframes positionItem6 {
+    from{
+        transform: var(--item6-transform);
+        filter: var(--item6-filter);
+        z-index: var(--item6-zindex);
+        opacity: var(--item6-opacity);
+    }
+}
+.carousel.prev .list .item:nth-child(9) {
+    animation: transformFromPosition10 2.0s ease-in-out forwards;
+}
+.carousel.prev .list .item:nth-child(8) {
+    animation: transformFromPosition9 1.7s ease-in-out forwards;
+}
+@keyframes transformFromPosition9 {
+    from {
+        transform: var(--item9-transform);
+        filter: var(--item9-filter);
+        z-index: var(--item9-zindex);
+        opacity: var(--item9-opacity);
+    }
+}
+.carousel.prev .list .item:nth-child(7) {
+    animation: transformFromPosition8 1.5s ease-in-out forwards;
+}
+@keyframes transformFromPosition8 {
+    from {
+        transform: var(--item8-transform);
+        filter: var(--item8-filter);
+        z-index: var(--item8-zindex);
+        opacity: var(--item8-opacity);
+    }
+}
+.carousel.prev .list .item:nth-child(6) {
+    animation: transformFromPosition7 1.3s ease-in-out forwards;
+}
+@keyframes transformFromPosition7 {
+    from {
+        transform: var(--item7-transform);
+        filter: var(--item7-filter);
+        z-index: var(--item7-zindex);
+        opacity: var(--item7-opacity);
+    }
+}
+.carousel.prev .list .item:nth-child(5) {
+    animation: positionItem4 1.1s ease-in-out forwards;
+}
+.carousel.prev .list .item:nth-child(4) {
+    animation: positionItem3 0.9s ease-in-out forwards;
+}
+.carousel.prev .list .item:nth-child(3) {
+    animation: positionItem2 0.5s ease-in-out forwards;
+}
+.carousel.prev .list .item:nth-child(2) {
+    animation: transformFromPosition1 0.3s ease-in-out forwards;
+}
+@keyframes transformFromPosition1 {
+    from {
+        transform: var(--item1-transform);
+        filter: var(--item1-filter);
+        z-index: var(--item1-zindex);
+        opacity: var(--item1-opacity);
+    }
+}
+.carousel.prev .list .item:nth-child(1) {
+    animation: transformFromPosition10 2.3s ease-in-out forwards;
+}
+@keyframes transformFromPosition10 {
+    from {
+        transform: var(--item10-transform);
+        filter: var(--item10-filter);
+        z-index: var(--item10-zindex);
+        opacity: var(--item10-opacity);
+    }
+}
+.carousel .list .item .detail{
+    opacity: 0;
+    pointer-events: none;
+}
+.carousel .list .item{
+    transition: left 0.5s, opacity 0.5s;
+}
+.carousel.showDetail .list .item:nth-child(4),
+.carousel.showDetail .list .item:nth-child(5){
+    right: 100%;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.carousel.showDetail .list .item:nth-child(3){
+    width: 100%;
+}
+.carousel.showDetail .list .item:nth-child(3) .intro{
+    opacity:  0;
+    pointer-events: none;
+}
+.carousel .list .item:nth-child(3) img{
+    transition: right 0.5s;
+}
+.carousel.showDetail .title .experience:nth-child(3) img{
+    right: 50%;
+}
+.carousel.showDetail .list .item:nth-child(3) .detail{
+    opacity: 1;
+    width: 50%;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: right;
+    pointer-events: auto;
+}
+.carousel.showDetail .list .item:nth-child(3) .detail .title{
+    font-size: 4em;
+}
+.carousel.showDetail .list .item .detail .experience{
+    display: flex;
+    gap: 10px;
+    width: 100%;
+    border-top: 1px solid #5553;
+    margin-top: 20px;
+}
+.carousel.showDetail .list .item:nth-child(3) .detail .experience div{
+    width: 90px;
+    text-align: center;
+    flex-shrink: 0;
+}
+.carousel.showDetail .list .item:nth-child(3) .detail .experience div p:nth-child(1){
+    font-weight: bold;
+}
+.carousel.showDetail .list .item:nth-child(3) .detail  .title,
+.carousel.showDetail .list .item:nth-child(3) .detail  .des,
+.carousel.showDetail .list .item:nth-child(3) .detail .experience
+{
+    opacity: 0;
+    animation: showContent 0.5s 1s ease-in-out 1 forwards;
+}
+.carousel.showDetail .list .item:nth-child(3) .detail  .des{
+    animation-delay: 1.2s;
+}
+.carousel.showDetail .list .item:nth-child(3) .detail .experience{
+    animation-delay: 1.4s;
+}
+.carousel.showDetail #next,
+.carousel.showDetail #prev{
+    opacity: 0;
+}
+.carousel.showDetail #back{
+    opacity: 1;
+    pointer-events: auto;
+}
+.arrows{
+    position: absolute;
+    bottom: 10px;
+    width: 1140px;
+    max-width: 90%;
+    display: flex;
+    justify-content: space-between;
+    left: 50%;
+    transform: translateX(-50%);
+}
+#prev,
+#next{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    font-family: monospace;
+    border: 1px solid #5555;
+    font-size: large;
+    bottom: 20%;
+    left: 10%;
+}
+#next{
+    left: unset;
+    right: 10%;
+}
+#back{
+    position: absolute;
+    z-index: 100;
+    bottom: 0%;
+    left: 50%;
+    transform: translateX(-50%);
+    border: none;
+    border-bottom: 1px solid #555;
+    font-family: Poppins;
+    font-weight: bold;
+    letter-spacing: 3px;
+    background-color: transparent;
+    padding: 10px;
+    /* opacity: 0; */
+    transition: opacity 0.5s;
+}
+.carousel.showDetail #back{
+    opacity: 1;
+}
+.carousel.showDetail #prev,
+.carousel.showDetail #next{
+    opacity: 0;
+    pointer-events: none;
+}
+.carousel::before{
+    width: 500px;
+    height: 300px;
+    content: '';
+    background-image: linear-gradient(70deg, #DC422A, blue);
+    position: absolute;
+    z-index: -1;
+    border-radius: 20% 30% 80% 10%;
+    filter: blur(150px);
+    top: 50%;
+    left: 50%;
+    transform: translate(-10%, -50%);
+    transition: 1s;
+}
+.carousel.showDetail::before{
+    transform: translate(-100%, -50%) rotate(90deg);
+    filter: blur(130px);
+}
+@media screen and (max-width: 991px){
+    /* ipad, tablets */
+    .carousel .list .item{
+        width: 90%;
+    }
+    .carousel.showDetail .list .item:nth-child(3) .detail .specifications{
+        overflow: auto;
+    }
+    .carousel.showDetail .list .item:nth-child(3) .detail .title{
+        font-size: 2em;
+    }
+}
+@media screen and (max-width: 767px){
+    /* mobile */
+    .carousel{
+        height: 600px;
+    }
+    .carousel .list .item{
+        width: 100%;
+        font-size: 10px;
+    }
+    
+    .carousel .list{
+        height: 100%;
+    }
+    .carousel .list .item:nth-child(3) .intro{
+        width: 50%;
+    }
+    
+    .carousel .list .item img{
+        width: 40%;
+    }
+    .carousel.showDetail .list .item:nth-child(3) .detail{
+        backdrop-filter: blur(10px);
+        font-size: small;
+    }
+    .carousel .list .item:nth-child(3) .intro .des,
+    .carousel.showDetail .list .item:nth-child(3) .detail .des{
+        height: 100px;
+        overflow: auto;
+    }
+}
+.grid {
+    position: relative;
+    width: 300px;
+    height: 400px; /* Adjust height to suit your design */
+    margin: auto;
+}
+.bat-left {
+    position: absolute;
+    top: 50px;
+    left: 0;
+    transform: rotate(-45deg); /* Slanting bat 1 */
+    z-index: 1; /* Ensure this bat stays on top */
+}
+
+.bat-right {
+    position: absolute;
+    top: 50px;
+    right: 0;
+    transform: rotate(45deg); /* Slanting bat 2 */
+    z-index: 0; /* Ensure this bat is behind bat-left */
+}
+.autoRotate{
+    animation: autoRotateAnimation;
+    animation-timeline: view();
+}
+@keyframes autoRotateAnimation{
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+.autoShow{
+    display: grid;
+    place-items: center;    
+    animation: autoShowAnimation both;
+    animation-timeline: view(70% 5%);
+
+}
+@keyframes autoShowAnimation{
+    from{
+        opacity: 0;
+        transform: translateY(200px) scale(0.3);
+    }to{
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+.bat-left {
+    transform: rotate(-30deg);
+}
+
+.bat-right {
+    transform: rotate(30deg);
+}
+section {
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+#container3D{
+    position: absolute;
+    inset: 0;
+    /* background-color: red; */
+    z-index: 50;
+    pointer-events: none;
+}
+.banner{
+    position: relative;
+    height: 100vh;
+}
+.banner #dotsCanvas{
+    position: absolute;
+    background-color: transparent;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+    pointer-events: none;
+}
